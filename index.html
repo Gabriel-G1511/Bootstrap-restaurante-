@@ -73,7 +73,7 @@
   </header>
 
   <!-- Wrapper com scrollspy ativado, apontando para o cabeçalho -->
-  <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+  <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
     <section id="sobre-o-restaurante">
       <!-- Carrossel Bootstrap com slides automáticos -->
       <div id="carousel" class="carousel slide" data-bs-ride="carousel">
@@ -119,7 +119,7 @@
               <img src="/images/restaurante.jpg" class="d-block w-100 rounded" alt="foto do interior do restaurante">
             </div>
             <!-- Coluna com títulos, parágrafos e lista -->
-            <div class="col-md-7">
+            <div class="col-md-7 mt-3 mt-md-0">
               <h2 class="section-title">Sobre o <span class="text-colored" >restaurante</span></h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis odit ipsam rerum voluptates itaque nulla eveniet in iste dolore, molestiae sapiente fugiat, debitis, iure quos obcaecati neque? Ex, quae sit?
@@ -230,7 +230,7 @@
           </div>
 
           <!-- BEBIDAS NÃO ALCOÓLICAS -->
-          <div class="tab-pane" id="bebidas-nao-alcolicas">
+          <div class="tab-pane" id="bebidas-nao-alcoolicas">
             <div class="row">
               <div class="col-md-3">
                 <img src="images/cardapio/bebidas/coca.jpg" alt="coca-cola" class="d-block w-100 rounded">
@@ -269,34 +269,11 @@
           <div class="tab-pane" id="entradas">
             <div class="row">
               <div class="col-md-3">
-                <img src="images/cardapio/entradas/salada.jpg" alt="salada" class="d-block w-100 rounded">
-                <h5 class="text-colored fw-bold mt-2">Salada</h5>
+                <img src="images/cardapio/entradas/entrada.jpg" alt="entrada" class="d-block w-100 rounded">
+                <h5 class="text-colored fw-bold mt-2">entrada</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               </div>
-              <div class="col-md-3">
-                <img src="images/cardapio/entradas/torresmo.jpg" alt="torresmo" class="d-block w-100 rounded">
-                <h5 class="text-colored fw-bold mt-2">Torresmo</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <div class="col-md-3">
-                <img src="images/cardapio/entradas/salada.jpg" alt="salada" class="d-block w-100 rounded">
-                <h5 class="text-colored fw-bold mt-2">Salada</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <div class="col-md-3">
-                <img src="images/cardapio/entradas/torresmo.jpg" alt="torresmo" class="d-block w-100 rounded">
-                <h5 class="text-colored fw-bold mt-2">Torresmo</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <div class="col-md-3">
-                <img src="images/cardapio/entradas/salada.jpg" alt="salada" class="d-block w-100 rounded">
-                <h5 class="text-colored fw-bold mt-2">Salada</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <div class="col-md-3">
-                <img src="images/cardapio/entradas/torresmo.jpg" alt="torresmo" class="d-block w-100 rounded">
-                <h5 class="text-colored fw-bold mt-2">Torresmo</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              
               </div>
             </div>
           </div>
@@ -385,7 +362,7 @@
 
         </div>
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-7 mb-5">
             <form>
               <div class="mb-3">
                 <label for="nome" class="form-control fw-bold text-colored">Seu Nome</label>
@@ -444,6 +421,23 @@
       </div>
     </section>
   </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    // Máscara para telefone (formato brasileiro)
+    $('#telefone').mask('(00) 00000-0000');
+
+    // Máscara para e-mail (aceita padrão simples)
+    $('#email').mask("A", {
+      translation: {
+        "A": { pattern: /[\w@\-.+]/, recursive: true }
+      }
+    });
+  });
+</script>
 
   <!-- Bootstrap JS Bundle (necessário para o colapso do menu e o carrossel funcionarem) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
