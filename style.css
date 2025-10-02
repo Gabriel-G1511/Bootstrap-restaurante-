@@ -1,0 +1,68 @@
+/* Define a fonte padrão do site */
+body {
+    font-family: Roboto, sans-serif;
+}
+
+/* Cor de fundo da barra de navegação */
+.navbar {
+    background-color: #e15f41;
+    
+}
+
+/* Estilo para o link ativo do menu */
+#cabecalho .nav .nav-link.active {
+    background-color: #fff; /* fundo branco no item ativo */
+    color: #e15f41; /* texto laranja do item ativo */
+}
+
+/* Estilo para links e para o hover no nome da marca */
+
+#cabecalho .nav .nav-link,
+.navbar-brand:hover {
+    color: #fff; /* texto branco */
+}
+/* Cor de fundo do botão (hambúrguer) do menu em telas menores */
+.navbar-toggler {
+    background-color: #ffeae6;
+}
+
+/* Fonte personalizada para o nome da marca */
+.section-title{
+    font-family: Pacifico, cursive;
+}
+
+#sobre-o-restaurante, #cardapio{
+    background-color: #ffeae6;
+}
+.text-colored{
+    color: #e15f41;
+}
+.nav-cardapio .nav-link.active,
+#contato button {
+    background-color: #e15f41;
+    color: #fff;
+}
+
+.nav-cardapio .nav-link:hover{
+    color:#e15f41;
+
+}
+.nav-cardapio .nav-link.active:hover{
+    color:#fff;
+}
+.Social-links li{
+    list-style:none;
+    display:inline;
+    text-decoration:none;
+
+}
+.Social-links a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .cousel-item img {
+        height:280px;
+    }
+    
+}
