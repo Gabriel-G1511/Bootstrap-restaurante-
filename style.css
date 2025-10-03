@@ -38,7 +38,7 @@ body {
     color: #e15f41;
 }
 .nav-cardapio .nav-link.active,
-#contato button {
+#contato button, #botao {
     background-color: #e15f41;
     color: #fff;
 }
